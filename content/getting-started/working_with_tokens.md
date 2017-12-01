@@ -6,7 +6,7 @@ featured: true
 # Working with Tokens
 
 
-Read this chapter to learn how to enhance security by working with tokens. Whenever you login to npm, a security token (a hexidecimal string) is generated. Tokens authenticate your account, and provide the rights you need to publish and access your modules. Tokens are often used with continuous integration testing environments.  For example, Travis-CI provides an environment variable that you can assign to a token value. This gives Travis-CI the ability to run npm as your npm user, including the ability to install private packages to which you have access. 
+Read this chapter to learn how to enhance security by working with tokens. Whenever you login to npm, a security token (a hexadecimal string) is generated. Tokens authenticate your account, and provide the rights you need to publish and access your modules. Tokens are often used with continuous integration testing environments.  For example, Travis-CI provides an environment variable that you can assign to a token value. This gives Travis-CI the ability to run npm as your npm user, including the ability to install private packages to which you have access. 
 
 **Note**: *There are additional steps required if you wish to use tokens for testing and other special purposes. These steps are out of the scope of this chapter.* 
 
@@ -29,13 +29,13 @@ The following table explains the token list.
 
 List Result| Purpose
 -------------| -------------
-id	| Use the id to refer to the token in commands
-token | This is the first part of the actual token 
-created | Date the token was created
-readonly | If no, the token provides full permissions
+id	| ID used to refer to token in commands
+token | First 6 characters of token 
+created | Date token was created
+readonly | If no, the token provides full permissions (default)
 CIDR whitelist| Restricts token use by IP address
 
-A token can be both read-only as well as CIDR-whitelisted. 
+A token can be both read-only and CIDR-whitelisted. 
 
 If you have enabled two-factor authentication on your profile, you have an additional layer of security. No one will be able to modify or create your tokens unless they provide the second authentication factor. 
 
@@ -56,7 +56,7 @@ The default setting for new tokens is full-permission.
 
 * *Read-only* tokens allow installation and distribution.
 * *Full-permission* tokens allow installation, distribution, publishing, and all rights that you have on your account
-* *CIDR whitelist* tokens can only be used from specified ip address ranges. Use this to restrict tokens to a single company, or a specified developer team, for example. At this time, only IPv4 is supported. 
+* *CIDR whitelist* tokens can only be used from specified IP address ranges. Use this to restrict tokens to a single company, or a specified developer team, for example. At this time, only IPv4 is supported. 
 
 When a token is read-only, it cannot be used to make changes to a package. If a token is not explicitly set to read-only, it has full permissions, including publish and modification rights. 
 
@@ -90,12 +90,12 @@ Note that read-only is set to *true*.
 
 To limit the token so that it can only be used from specified ip addresses, you can create a CIDR-restricted token. CIDR is an acronym for Classless Inter-Domain Routing. The [CIDR Wiki page](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) will get you started. 
 
-Using a CIDR restriction makes it possibe for you to force anyone or any system using the token to either physically or remotely be within the specified ip address range. 
+Using a CIDR restriction makes it possible for you to force anyone or any system using the token to either physically or remotely be within the specified IP address range. 
 ```
 	npm token create --[--cidr=list]
 ```
 
-example.: 
+example: 
 
 ```
 	npm token create --cidr=192.0.2.0/24
