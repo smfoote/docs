@@ -1,21 +1,24 @@
 <!--
-title: 17 - Working with tokens
+title: 17 - How to work with security tokens
 featured: true
 -->
+# How to Work with Security Tokens
+*Requires npm version 5.5.1 or greater*
 
-# Working with Tokens
+Whenever you login to npm, a security token is generated. Tokens authenticate your account, and give you rights to publish and access your modules. 
 
+Because a token is simply a hexadecimal string, you can use the token in other tools, such as continuous integration testing environments, so that the tool can run with the access it needs to complete tasks. For example, Travis-CI provides an environment variable that you can assign to a token value. This gives Travis-CI the ability to run npm as your npm user, including the ability to install private packages to which you have access. 
 
-Read this chapter to learn how to enhance security by working with tokens. Whenever you login to npm, a security token (a hexadecimal string) is generated. Tokens authenticate your account, and provide the rights you need to publish and access your modules. Tokens are often used with continuous integration testing environments.  For example, Travis-CI provides an environment variable that you can assign to a token value. This gives Travis-CI the ability to run npm as your npm user, including the ability to install private packages to which you have access. 
+Read this chapter to learn how to manage security tokens. 
 
-**Note**: *There are additional steps required if you wish to use tokens for testing and other special purposes. These steps are out of the scope of this chapter.* 
+**Note**: *There are additional steps required if you wish to use tokens for testing and other special purposes. These steps are not in the scope of this chapter.* 
 
 Token commands empower you to:
 
-* View tokens for easier tracking and management
-* Create new tokens, specifiying read-only or full-permission
-* Delete/revoke tokens  
-* Limit access according to IP address ranges (CIDR)
+* View tokens for easier tracking and management.
+* Create new tokens, specifying read-only or full-permission.
+* Delete/revoke tokens.  
+* Limit access according to IP address ranges (CIDR).
 
 ## How to View the Tokens On Your Account: 
 
@@ -27,17 +30,11 @@ To view the tokens associated with your account, type:
 
 The following table explains the token list. 
 
-List Result| Purpose
--------------| -------------
-id	| ID used to refer to token in commands
-token | First 6 characters of token 
-created | Date token was created
-readonly | If no, the token provides full permissions (default)
-CIDR whitelist| Restricts token use by IP address
+![tokenlisttable](/images/token-list-table.png)
 
 A token can be both read-only and CIDR-whitelisted. 
 
-If you have enabled two-factor authentication on your profile, you have an additional layer of security. No one will be able to modify or create your tokens unless they provide the second authentication factor. 
+If you have enabled two-factor authentication on your profile, you have implemented an additional layer of security. 
 
 **Note**: The token list shows a truncated version of the token. 
 View the [npmrc file](https://docs.npmjs.com/files/npmrc) if you need to see the full token. 
@@ -70,9 +67,9 @@ If you have set up two-factor authentication, you will be prompted for your npm 
 
 ![npmtokencreatelong](/images/npm-token-create-long-version.png)
 
-**NOTE**: Save a screen shot of the token field, as this will be your only chance to view it.  
+**TIP**: Save a screen shot of the token field, as this will be your only chance to view it.  
 
-Note that readonly defaults to *false*.
+Note that read-only defaults to *false*.
 
 ### How to Create a New Read-Only Token
 
@@ -91,6 +88,7 @@ Note that read-only is set to *true*.
 To limit the token so that it can only be used from specified ip addresses, you can create a CIDR-restricted token. CIDR is an acronym for Classless Inter-Domain Routing. The [CIDR Wiki page](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) will get you started. 
 
 Using a CIDR restriction makes it possible for you to force anyone or any system using the token to either physically or remotely be within the specified IP address range. 
+
 ```
 	npm token create --[--cidr=list]
 ```
@@ -103,7 +101,6 @@ example:
 ```
 
 If you have set up two-factor authentication, you will be prompted for an npm password, followed by an OTP. npm will display this table: 
-
 
 ![npmtokencreatecidr](/images/CIDR-create-token.png)
 
@@ -148,6 +145,6 @@ The following screen shot demonstrates these steps:
 
 ![npmtokenrevokeshort](/images/npm-token-revoke-shorter.png)
 
-*Note*: All tokens shown in screen illustrations have been revoked. 
+*Note: All tokens shown in screen illustrations have been revoked.* 
 
- 
+*Note: In certain cases, there may be a delay of up to an hour before a token is successfully revoked. npm is currently working to make revocation occur immediately in all cases.*  

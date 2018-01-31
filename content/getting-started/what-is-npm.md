@@ -2,23 +2,88 @@
 title: 01 - What is npm?
 featured: true
 -->
-
 # What is npm?
 
-<p>npm makes it easy for JavaScript developers to share and reuse code, and it makes it easy to update the code that you&#39;re sharing.</p>
+npm opens up an entire world of JavaScript talent to you and to your team. It's the world's largest software registry, with approximately 3 billion downloads per week.The registry contains over 600,000 _packages_ (building blocks of code).  Open-source developers from every continent use npm to share and borrow packages. Packages are structured to enable you to keep track of dependencies and versions. 
+
+Here is a quick introduction to npm:
 
 <iframe width="670" height="480" src="https://www.youtube.com/embed/x03fjb2VlGY" frameborder="0" allowfullscreen></iframe>
 
- <p>If you've been working with JavaScript for a while, you might have heard of npm. npm makes it easy for JavaScript developers to share the code that they've created to solve particular problems, and for other developers to reuse that code in their own applications.</p>
- 
- <p>Once you're depending on this code from other developers, npm makes it easy to check to see if they've made any updates to it and to download those updates when they're made.</p>
- 
- <p>These bits of reusable code are called packages or modules. A package is just a directory with one or more files in it, along with a file called "package.json" that contains metadata about the package. A typical application, such as a website, will depend on dozens or hundreds of packages. These packages are often small; the general idea is that you create a small building block which solves one problem well. This makes it possible for you to compose larger custom solutions out of these small building blocks.</p>
-  
-  <p>There's lots of benefits to this; it makes it possible for your team to draw on expertise outside of your organization by bringing in packages from people who have focused on particular problem areas. Even if you don't reuse code from people outside of your organization, using this kind of module-based approach can help your team work together better and make it possible to reuse code across projects.</p> 
- 
- <p>You can find packages to help you build your application by browsing the npm website. When you're browsing the website, you'll find lots of Node modules. npm started as the Node package manager, so you'll find lots of modules which can be used on the server side. There are also lots of packages which add commands for you to use in the command line. You'll also find packages which can be used on the front end.</p>
- 
- <p>npm is made up of three distinct pieces: the website, the registry, and the CLI. The website serves as the primary tool for users to discover packages, the registry is a large database of information about packages, and the CLI is how developers publish their packages on the registry or download packages they wish to install. </p>
- 
- <p>npm is a way to reuse code from other developers, and also a way to share your code with them, and it makes it easy to manage the different versions of code.</p>
+npm consists of three distinct components:
+
+*  the website
+*  the registry
+*  the Command Line Interface (CLI)
+
+The [*website*](https://npmjs.com) is the primary way developers discover packages, set up profiles, and manage other aspects of their npm experience.
+
+The *registry* is a large database of information about packages.
+
+The [*CLI*](https://docs.npmjs.com/cli/npm) runs from a terminal. This is how most developers interact with npm.
+
+## Use npm to . . . 
+
+* Adapt packages to your apps, or incorporate them as they are.
+
+* Download standalone tools you can use right away.
+
+* Run packages without downloading using [npx](https://www.npmjs.com/package/npx).
+
+* Share code with any npm user, any where.
+
+* Restrict code to specific developers.
+
+* Form virtual teams (orgs).
+
+* Manage multiple versions of code and code dependencies.
+
+* Update applications easily when underlying code is updated.
+
+* Discover multiple ways to solve the same puzzle. 
+
+* Find other developers who are working on similar problems.  
+
+These are just a few examples of ways developers use npm. If you'd like to add a bullet point, comment [here](https://github.com/npm/docs/issues/944).   
+
+## How to Find Packages
+
+To find packages, start with the npm [search bar](https://www.npmjs.com).
+
+While browsing, you'll find:
+
+*  node modules, which can be used on the server side.
+*  packages that add commands for you to use in the command line.
+*  packages that can be used on the front end of websites.  
+
+(To understand the difference between node modules and packages, click [here](https://docs.npmjs.com/getting-started/packages)).
+
+### Example: Finding a Package
+
+For example, suppose you wanted to use bar codes (QR codes) in your application. Rather than spend weeks figuring out how to do this, why not see if someone has posted a package that creates QR codes? Start by entering a value in the search bar:
+
+![blanksearchbar](/images/search-bar-qr-scanner-what-is-npm.png)
+
+Related options will appear:
+
+![choicessearchbar](/images/search-results-qr-what-is-npm.png)
+
+Or, click, to filter the possibilities even more:
+
+![filtersearchbar](/images/search-qr-what-is-npm.png)
+
+When you choose a package to explore, more information appears. This information is written by the package author(s) so details vary.
+
+![searchresults](/images/page-results-qr-scanner-what-is-npm.png)
+
+Now, you can read the developer's instructions to discover how to use this package.
+
+## Next Steps
+
+Now that you know what npm is, and a bit about how to use it, it's time to get started.  [Install npm](https://docs.npmjs.com/getting-started/installing-node). We look forward to seeing what you will create!
+
+## Learn More
+
+To learn more about npm as a product, new features on the way, and interesting uses of npm, sign up for our newsletter at [npm-weekly](https://www.npmjs.com/npm-weekly).
+
+To explore additional features that you might wish to use as your project evolves, click [here] (https://www.npmjs.com/pricing).
