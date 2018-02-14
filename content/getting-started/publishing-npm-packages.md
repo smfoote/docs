@@ -64,7 +64,7 @@ Before you begin, please look at some of the package pages to get ideas for the 
  
 2. Save it in the project directory with the name **readme.md** 
 
-3. When you publish, this documenation will display on the web page where people download your package. 
+3. When you publish, this documentation will display on the web page where people download your package. 
 
 ## Publish! 
 
