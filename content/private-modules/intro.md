@@ -14,7 +14,7 @@ With npm private packages, you can use the npm registry to host your own private
 You need a version of npm greater than `2.7.0`, and you'll need to log in to npm again.
 
 ```sh
-sudo npm install -g npm
+npm install -g npm
 npm login
 ```
 
