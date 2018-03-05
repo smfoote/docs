@@ -52,4 +52,4 @@ Instead of steps 2-4, you can use the corresponding ENV variable (e.g. if you do
      
 #### Tip: Consider npx
 
-If you are using npm version 5.2 or greater, explore [npx](https://www.npmjs.com/package/npx) as an alternative way to run global commands, especially if you just need a command occassionally. Click here to read an excellent article about [npx](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b).
+If you are using npm version 5.2 or greater, explore [npx](https://www.npmjs.com/package/npx) as an alternative way to run global commands, especially if you just need a command occassionally. Click [here](https://medium.com/@maybekatz/introducing-npx-an-npm-package-runner-55f7d4bd282b) to read an excellent article about npx.
