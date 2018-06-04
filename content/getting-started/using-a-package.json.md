@@ -204,7 +204,7 @@ If you have a `package.json` file in your directory and you run `npm install`, n
 
 ## Learn More 
 
-To understand more about the power of package.json, see the video "Installing npm packages locally" which you can find in [Chapter 8](https://docs.npmjs.com/getting-started/installing-npm-packages-globally). 
+To understand more about the power of package.json, see the video "Installing npm packages locally" which you can find in [Chapter 4](https://docs.npmjs.com/getting-started/installing-npm-packages-locally). 
 
 To learn more about semantic versioning, see [Getting Started "Semver" page][1].
 
