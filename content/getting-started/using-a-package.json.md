@@ -23,7 +23,7 @@ A `package.json` must have:
 - `"name"`
   - all lowercase
   - one word, no spaces
-  - dashes and underscores allowed
+  - hyphens and underscores allowed
 - `"version"`
   - in the form of `x.x.x`
   - follows [semver spec](https://docs.npmjs.com/getting-started/semantic-versioning)
@@ -178,16 +178,16 @@ For example, the project below uses any version of the package `my_dep` that mat
 }
 ```
 
-### The `--save` and `--save-dev` install flags
+### The `--save-prod` and `--save-dev` install flags
 
 The easier (and more awesome) way to add dependencies to your `package.json` is to do
-so from the command line, flagging the `npm install` command with either `--save` or
+so from the command line, flagging the `npm install` command with either `--save-prod` (assumed by default) or
 `--save-dev`, depending on how you'd like to use that dependency.
 
 To add an entry to your `package.json`'s `dependencies`:
 
 ```
-npm install <package_name> --save
+npm install <package_name> [--save-prod]
 ```
 
 To add an entry to your `package.json`'s `devDependencies`:
@@ -204,10 +204,10 @@ If you have a `package.json` file in your directory and you run `npm install`, n
 
 ## Learn More 
 
-To understand more about the power of package.json, see the video "Installing npm packages locally" which you can find in [Chapter 8](https://docs.npmjs.com/getting-started/installing-npm-packages-globally). 
+To understand more about the power of package.json, see the video "Installing npm packages locally" which you can find in [Chapter 4](https://docs.npmjs.com/getting-started/installing-npm-packages-locally). 
 
 To learn more about semantic versioning, see [Getting Started "Semver" page][1].
 
-[1]: docs.npmjs.com/getting-started/semantic-versioning
+[1]: https://docs.npmjs.com/getting-started/semantic-versioning
 [2]: https://opensource.org/licenses/ISC
 
