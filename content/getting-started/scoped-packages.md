@@ -82,4 +82,4 @@ In a `require` statement:
 var projectName = require("@username/project-name")
 ```
 
-For information about using scoped private modules, visit [npmjs.com/private-modules](https://www.npmjs.com/private-modules).
+For information about using scoped private modules, visit [docs.npmjs.com/private-modules/intro](https://docs.npmjs.com/private-modules/intro).
