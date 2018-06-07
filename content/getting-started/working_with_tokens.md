@@ -75,7 +75,7 @@ The following table explains the token list.
 
 ![tokenlisttable](/images/token-list-table.png)
 
-A token can be both read-only as well as CIDR-whitelisted. 
+A token can be both read-only and CIDR-whitelisted. 
 
 If you have enabled two-factor authentication on your profile, you have implemented an additional layer of security. 
 
@@ -96,7 +96,7 @@ The default setting for new tokens is full-permission.
 
 * *Read-only* tokens allow installation and distribution.
 * *Full-permission* tokens allow installation, distribution, publishing, and all rights that you have on your account
-* *CIDR whitelist* tokens can only be used from specified ip address ranges. Use this to restrict tokens to a single company, or a specified developer team, for example. At this time, only IPv4 is supported. 
+* *CIDR whitelist* tokens can only be used from specified IP address ranges. Use this to restrict tokens to a single company, or a specified developer team, for example. At this time, only IPv4 is supported. 
 
 When a token is read-only, it cannot be used to make changes to a package. If a token is not explicitly set to read-only, it has full permissions, including publish and modification rights. 
 
@@ -130,12 +130,13 @@ Note that read-only is set to *true*.
 
 To limit the token so that it can only be used from specified ip addresses, you can create a CIDR-restricted token. CIDR is an acronym for Classless Inter-Domain Routing. The [CIDR Wiki page](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) will get you started. 
 
-Using a CIDR restriction makes it possible for you to force anyone or any system using the token to either physically or remotely be within the specified ip address range. 
+Using a CIDR restriction makes it possible for you to force anyone or any system using the token to either physically or remotely be within the specified IP address range. 
+
 ```
 	npm token create --[--cidr=list]
 ```
 
-example.: 
+example: 
 
 ```
 	npm token create --cidr=192.0.2.0/24
