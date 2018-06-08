@@ -7,7 +7,8 @@ The policies cover the [Code of Conduct](https://www.npmjs.com/policies/conduct)
 * Terms of Use
 * Package Name Disputes
 * npm License
-* Priavay Policy
+* Privacy Policy
+* Unpublish Policy
 * Receiving Abuse Reports
 * Copyright and DMCA Policy
 * Trademark Policy
