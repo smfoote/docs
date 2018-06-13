@@ -29,14 +29,15 @@ There are two levels of authentication, ***auth-only*** and ***auth-and-writes**
 If you enable 2FA in **auth-only** mode, npm will require an OTP when you:
 
 * log in
+* create or revoke tokens
 * remove 2FA
 
 If you enable 2FA in **auth-and-writes** mode, which is the default, npm will require an OTP when you:
 
 * log in
 * change your profile
-* create or revoke tokens 
-* publish packages 
+* create or revoke tokens
+* publish packages
 * change access
 * change your password
 * make other sensitive changes to packages
